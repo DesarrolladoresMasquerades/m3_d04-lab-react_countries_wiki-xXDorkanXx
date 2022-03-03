@@ -5,9 +5,9 @@ export default function CountriesList(props){
         <div>
             {props.countries.map((country)=>{
                 return(
-                    <Link exact to={"/" + country.alpha3Code} countries={props.countries}>
-                        <img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code}.png`} alt="country flag"/>
-                        <p>{country.name}</p>
+                    <Link key={country._id} to={"/" + country.alpha3Code} countries={props.countries}>
+                        <img src={`https://flagpedia.net/data/flags/w580/${country.alpha2Code.toLowerCase()}.png`} alt="country flag" width="100px" height="auto" />
+                        <p>{country.name.official}</p>
                     </Link>
                 )
             })}
