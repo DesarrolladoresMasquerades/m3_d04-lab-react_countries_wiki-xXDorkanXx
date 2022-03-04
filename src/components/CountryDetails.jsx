@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CountryDetails(props){
 
     const {countryId} = useParams();
-    const country = props.countries.find(country=>country.alpha3Code === countryId)
+    const country = props.countries.find(country=>country._id === countryId)
 
     return (
         <div>
