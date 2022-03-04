@@ -22,7 +22,7 @@ export default function CountryDetails(props){
                 <h3>Borders</h3>
                 {country.borders.map((border)=>{
                     const borderCountry = props.countries.find((country)=>country.alpha3Code === border)
-                    return (<p key={"id" + border}><Link to={"/" + border}>{borderCountry.name.official}</Link></p>)
+                    return (<p key={"id" + border}><Link to={"/" + borderCountry._id}>{borderCountry.name.official}</Link></p>)
                 })}
             </div>
         </div>
